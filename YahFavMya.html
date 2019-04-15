@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <title>Mya Bryant</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("https://ih1.redbubble.net/image.388027075.6083/flat,550x550,075,f.u3.jpg");
+      background-size: cover;
+      background-position: center;
+      color: black;
+      font-family: 'Permanent Marker', cursive;
+    }
+    p {
+      font-size: 22px;
+      color: purple;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: blue;
+      color: white;
+      position: center;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://www.pngarts.com/files/2/Pug-PNG-Free-Download.png">
+  <p id="Sponge"> </p>
+  <input type="email" placeholder="Type Here" id = "Spongebob">
+  <input type="submit" onclick = "submit()">
+  <script> 
+  squidward = document.getElementById("Sponge")
+  prompts = {
+    bikini : "Would you rather live in a 'rock' or 'pineapple'?",
+    bottom : "You chose pineapple: Would you rather 'work at the chum bucket' or 'work at the krusty krab'?",
+    karen : "You chose rock: Would you rather 'work at the chum bucket' or 'work at the krusty krab'?",
+    plankton: "You chose to work at the chum bucket: Would you rather 'eat chum' or 'eat a krabby patty'?",
+    chum: "You chose to work at the krusty krab: Would you rather 'eat chum' or 'eat a krabby patty'?",
+    apple: "You chose to eat a krabby patty: Would you want to be 'the boss' or 'an employee'?",
+    banana: "You chose to eat chum: Would you want to be 'the boss' or 'an employee'?",
+  }
+  Spongebob = document.getElementById("Spongebob")
+
+  function submit()  {
+    if (Spongebob.value == "pineapple") {
+      squidward.innerHTML = prompts.bottom
+      Spongebob.value = ""
+  }  
+  
+    if (Spongebob.value == "rock") {
+      squidward.innerHTML = prompts.karen
+      Spongebob.value = ""
+  }
+    if (Spongebob.value == "work at the chum bucket") {
+      squidward.innerHTML = prompts.plankton
+      Spongebob.value = ""
+    }  
+    if (Spongebob.value == "work at the krusty krab") {
+      squidward.innerHTML = prompts.chum
+      Spongebob.value = ""
+    }
+    if (Spongebob.value == "eat a krabby patty") {
+      squidward.innerHTML = prompts.apple
+      Spongebob.value = ""
+    }
+    if (Spongebob.value == "eat a krabby patty") {
+      squidward.innerHTML = prompts.banana
+      Spongebob.value = ""
+    }
+  }  
+
+  squidward.innerHTML = prompts.bikini
+  </script>
+</body>
